@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 df=pd.read_csv('statdata.csv')
 l=list(df.data)
-print(l)
 n=len(l)
 print("Quartiles : ")
 print("Q0 : ",l[0])
@@ -17,7 +16,6 @@ iqr=q3-q1
 print("Inter Quartile Range : ",iqr)
 ho=q3+(1.5*iqr)
 lo=q1-(1.5*iqr)
-print('ho: ',ho,'\nlo: ',lo)
 print("Low Outliers : ",end='')
 p=0
 out=[]
@@ -44,8 +42,6 @@ for i in range(n-1,((n*3)//4),-1):
         break
 while out:
         l.remove(out.pop())
-print()
-print(l)
 print()
 print("Mean : ",np.mean(l))
 print("Median : ",np.median(l))
