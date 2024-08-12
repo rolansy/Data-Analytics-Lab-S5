@@ -35,7 +35,7 @@ for row in dissimilarity_matrix:
 
 nomatt = df.select_dtypes(exclude=['number'])
 nomr=nomatt.shape[0]
-dissimilarity_matrix = [[0.0 for _ in range(nomr)] for _ in range(nomr)]
+dissimilarity_matrix = [[0.00 for _ in range(nomr)] for _ in range(nomr)]
 
 for i in range(numr):
     for j in range(numr):
