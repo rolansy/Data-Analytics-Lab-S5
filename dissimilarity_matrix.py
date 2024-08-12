@@ -59,7 +59,7 @@ for i in range(numr):
                     dissimilarity += 1/cols if mixed_att[col][i] != mixed_att[col][j] else 0/cols
                 else:
                     dissimilarity += abs(mixed_att[col][i] - mixed_att[col][j])
-            dissimilarity_matrix[i][j] = round(dissimilarity,2)
+            dissimilarity_matrix[i][j] = round(dissimilarity/cols,2)
         else:
             dissimilarity_matrix[i][j] = 0
 
