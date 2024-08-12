@@ -56,7 +56,7 @@ for i in range(numr):
             dissimilarity = 0
             for col in mixed_att.columns.tolist():
                 if mixed_att[col].dtype == 'object':
-                    dissimilarity += 1/cols if mixed_att[col][i] != mixed_att[col][j] else 0/cols
+                    dissimilarity += 1 if mixed_att[col][i] != mixed_att[col][j] else 0
                 else:
                     dissimilarity += abs(mixed_att[col][i] - mixed_att[col][j])
             dissimilarity_matrix[i][j] = round(dissimilarity/cols,2)
