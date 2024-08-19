@@ -10,7 +10,7 @@ asd=df.a.std()
 bsd=df.b.std()
 corr=s/(n*asd*bsd)
 print('Correlation Coefficient: ',corr)
-print('Covariance : ',s/(n))
+print('Covariance : ',s/n)
 if corr>0:
     print('Positive Correlation')
 elif corr<0:
