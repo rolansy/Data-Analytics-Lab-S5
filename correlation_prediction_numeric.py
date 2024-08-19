@@ -18,4 +18,15 @@ elif corr<0:
 else:
     print('No Correlation')
 
+print('Using Function:')
+corr=df.a.corr(df.b)
+print('Correlation:',corr)
+print('Covariance : ',df.cov().loc['a','b'])
+if corr>0:
+    print('Positive Correlation')
+elif corr<0:
+    print('Negative Correlation')
+else:
+    print('No Correlation')
+
 
